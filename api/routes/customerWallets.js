@@ -3,5 +3,8 @@ module.exports = app => {
 
     app.route('/api/v1/customer-wallets')
         .get(controller.listCustomerWallets)
-        .post(controller.saveCustomerWallets);
+        .post(controller.saveCustomerWallets)
+
+    app.route('api/v1/customer-wallets/:customerId')
+        .delete(controller.removeCustomerWallets);
 }
